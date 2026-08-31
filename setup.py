@@ -11,6 +11,11 @@ APP = ['Clock.py']
 DATA_FILES = ["./resources"]
 OPTIONS = {
   'iconfile':'icon.icns',
+  'plist': {
+    "CFBundleGetInfoString": "A Rain World Clock",
+    "CFBundleIdentifier": "org.trebor-huang.rainworldclock",
+    "LSUIElement": True
+  }
 }
 
 setup(
@@ -18,9 +23,4 @@ setup(
     data_files=DATA_FILES,
     options={'py2app': OPTIONS},
     setup_requires=['py2app'],
-    plist={
-      "CFBundleGetInfoString": "A Rain World Clock",
-      "CFBundleIdentifier": "org.trebor-huang.rainworldclock",
-      "LSUIElement": True
-    }
 )
